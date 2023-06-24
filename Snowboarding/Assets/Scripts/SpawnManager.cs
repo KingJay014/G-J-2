@@ -7,8 +7,8 @@ public class SpawnManager : MonoBehaviour
 
     private GameObject previousGround = null;
     private Vector3 nextPosition = Vector3.zero;
-    private int initialSpawnAmount = 5;
-    private int maxTreePerTile = 5;
+    private int initialSpawnAmount = 3;
+    private int maxTreePerTile = 10;
 
     void Start()
     {

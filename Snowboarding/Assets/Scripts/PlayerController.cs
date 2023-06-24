@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     float xMax = 20f;
-    float speed = 5f;
+    float speed = 10f;
 
     void Update()
     {
