@@ -5,7 +5,7 @@ public class GroundTile : MonoBehaviour
     SpawnManager spawnManager;
     float travelMax = 300f;
 
-    void Start() 
+    void Start()
     {
         spawnManager = GameObject.FindObjectOfType<SpawnManager>();
     }
