@@ -3,6 +3,8 @@ using UnityEngine;
 public class GroundTile : MonoBehaviour
 {
     SpawnManager spawnManager;
+
+    [SerializeField] GameObject treePrefab;
     float travelMax = 300f;
 
     void Start()
@@ -23,7 +25,7 @@ public class GroundTile : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            spawnManager.SpawnTile();
+            spawnManager.SpawnTreeTile();
         }
     }
 }
