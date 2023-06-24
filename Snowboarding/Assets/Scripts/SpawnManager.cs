@@ -17,16 +17,7 @@ public class SpawnManager : MonoBehaviour
 
     public void SpawnTile()
     {
-        if (previousGround != null)
-        {
-            GameObject temp = Instantiate(groundPrefab, previousGround.transform.GetChild(1).transform.position, groundPrefab.transform.rotation);
-            previousGround = temp;
-        }
-        else
-        {
-            GameObject temp = Instantiate(groundPrefab, nextPosition, groundPrefab.transform.rotation);
-            previousGround = temp;
-            nextPosition = temp.transform.GetChild(1).transform.position;
-        }
+        GameObject temp = Instantiate(groundPrefab, previousGround == null ? nextPosition : previousGround.transform.GetChild(1).transform.position, groundPrefab.transform.rotation);
+        previousGround = temp;
     }
 }
