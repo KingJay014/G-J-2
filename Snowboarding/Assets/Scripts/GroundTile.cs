@@ -3,11 +3,7 @@ using UnityEngine;
 public class GroundTile : MonoBehaviour
 {
     SpawnManager spawnManager;
-
-    float speed = 20f;
-    //bool nextSpawned = false;
     float travelMax = 300f;
-
 
     void Start() 
     {
@@ -16,7 +12,7 @@ public class GroundTile : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.back * Time.deltaTime * speed, Space.Self);
+        transform.Translate(Vector3.back * Time.deltaTime * GameManager.instance.travelSpeed, Space.Self);
         if (transform.position.y > travelMax)
         {
             Destroy(gameObject);

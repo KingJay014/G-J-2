@@ -18,9 +18,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Tree"))
         {
             Debug.Log("Gameover");
-            speed = 0;
+            GameManager.instance.playerCrash = true;
         }
     }
-
-    
 }
